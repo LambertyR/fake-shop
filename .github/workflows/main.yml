@@ -37,8 +37,8 @@ jobs:
           kubeconfig: ${{ secrets.K8S_KUBECONFIG }}
 
       - uses: Azure/k8s-deploy@v5
-      with:
-        manifest: |
-          k8s/deployment.yaml
-        images: |
-          lambertyr/fakeshop:v${{ github.run_number }}
+        with:
+          manifest: |
+            k8s/deployment.yaml
+          images: |
+            lambertyr/fakeshop:v${{ github.run_number }}
